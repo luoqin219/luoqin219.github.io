@@ -1,0 +1,73 @@
+I"�	<ul>
+  <li>
+    <h1 id="social-networking-timeline-with-heterogeneous-backends">Social Networking Timeline with Heterogeneous Backends</h1>
+
+    <p><strong>Background</strong>: A single HTTP request to retrieve and display a page in a social network may trigger a large number of subsequent requests and database actions at the back-end. It does not make sense to store all the data in the same manner considering the heterogeneity of data we have.</p>
+
+    <p><strong>Objective</strong>: Build different back-end systems for a social network application, supporting user profile check, user activities’ track, and some data analytics.</p>
+
+    <p><strong>Main Functionalities</strong>:</p>
+
+    <ol>
+      <li>Show user’s profile after he/she logged in</li>
+      <li>Search a user’s followers and his/her comments</li>
+      <li>In-memory cached timeline for “top user” who has more than 300 followers</li>
+    </ol>
+
+    <p><strong>Interim Screenshots (Not Official Final Version)</strong></p>
+
+    <p><img src="/assets/img/portfolio-img/SNS2.png" alt="" /></p>
+
+    <h1 id="architecture">Architecture</h1>
+
+    <p><img src="/assets/img/portfolio-img/SNS1.png" alt="" /></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dataset</th>
+          <th>Data Store Type</th>
+          <th>Data Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Login Information</td>
+          <td>RDBMS</td>
+          <td>[userId, password, profileImageUrl]</td>
+        </tr>
+        <tr>
+          <td>Relations</td>
+          <td>Graph DB</td>
+          <td>[Followee, Follower]</td>
+        </tr>
+        <tr>
+          <td>Comments</td>
+          <td>Document DB</td>
+          <td>JSON - {“cid”:””, “parent_id”:””, “uid”:””, “timestamp”:””, “content”:””, “category”:””, “ups”:””, “downs”:””}</td>
+        </tr>
+        <tr>
+          <td>Profile Images</td>
+          <td>Amazon S3</td>
+          <td>URLs</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="role---back-end-engineer">Role - Back-end Engineer</h2>
+
+    <p>The web server used is <strong>undertow</strong>.</p>
+
+    <p>Main servlets implemented:</p>
+
+    <ul>
+      <li>Cache.java (HashMap&lt;String, String&gt; - (uid, info in JSON))</li>
+      <li>FollowerServlet.java</li>
+      <li>HomepageServlet.java</li>
+      <li>ProfileServlet.java</li>
+      <li>TimelineServlet.java</li>
+      <li>TimelineWithCacheServlet.java</li>
+    </ul>
+  </li>
+</ul>
+:ET

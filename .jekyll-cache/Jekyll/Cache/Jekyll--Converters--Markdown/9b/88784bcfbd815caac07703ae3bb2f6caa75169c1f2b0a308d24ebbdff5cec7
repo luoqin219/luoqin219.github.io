@@ -1,0 +1,56 @@
+I"O	<h1 id="hyattvrapp---web">HyattVRApp - Web</h1>
+
+<p><strong>Background</strong>: VR Lab hosts an Oculus Headset which students can use to practice public speaking skills. In practice mode, students will be immersed in a VR enviornment with fifteen virtual audiences. At the end of the practice, students are able to check the data analysis including his/her count of filler words, speaking pace, eye contact, and sentiment analysis.</p>
+
+<p><img src="/assets/img/portfolio-img/vrapp.jpg" alt="" /></p>
+
+<p><strong>Objective</strong>: There is one drawback of the VRApp itself - users can only review the data analysis in our lab’s computer and only after finishing one practice session. Therefore, we decided to build a web application to migarate all data and visualize them, so that students along with teachers can check any practice session’s data anytime and anywhere.</p>
+
+<p><strong>Main Functionalities</strong>:</p>
+
+<ol>
+  <li>Navigate records by time or student name</li>
+  <li>Data analysis dashboard for each practice session
+    <ul>
+      <li>Speaking Pace (gauge char)</li>
+      <li>Eye Contact (customized line and circles)</li>
+      <li>Pause Stats (waveform and calculated data)</li>
+      <li>Filler Words Count (line chart)</li>
+      <li>Swipeable Slides</li>
+      <li>Sentiment and Emotion Analysis</li>
+    </ul>
+  </li>
+  <li>Comparison between different sessions of specific students</li>
+  <li>Simple Comment for teachers</li>
+</ol>
+
+<p><strong>Interim Screenshots (Not Official Final Version)</strong></p>
+
+<p><img src="/assets/img/portfolio-img/vrweb1.jpeg" style="zoom: 80%;" /></p>
+
+<p>​</p>
+
+<p><img src="/assets/img/portfolio-img/vrweb4.jpeg" style="zoom:50%;" /></p>
+
+<p><img src="/assets/img/portfolio-img/vrweb3.jpeg" alt="" /></p>
+
+<h1 id="architecture">Architecture</h1>
+
+<p><img src="/Users/qinluo/Desktop/{site.baseurl}}/assets/img/portfolio-img/vrarch1.jpg" style="zoom:80%;" /></p>
+
+<p><img src="/Users/qinluo/Desktop/{site.baseurl}}/assets/img/portfolio-img/vrarch2.jpg" style="zoom:80%;" /></p>
+
+<h2 id="role---the-only-front-end-engineer">Role - The ONLY Front-end Engineer</h2>
+
+<p>The library used for front-end is <strong>React</strong>.</p>
+
+<p>Project is created with:</p>
+
+<ul>
+  <li>npm: 6.9.0</li>
+  <li>React version: 16.13.1</li>
+  <li>Webpack: 4.43.0</li>
+  <li>Node.js: 14.4.0</li>
+  <li>Port 8084 exposed</li>
+</ul>
+:ET
