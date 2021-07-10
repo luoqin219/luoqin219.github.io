@@ -44,7 +44,7 @@ tags: [Internship, Front-end, Software Development]
 
 # Architecture
 
-<img src="/{{site.baseurl}}/assets/img/portfolio-img/vrarch1.jpg" style="zoom:80%;" />
+<img src="{{site.baseurl}}/assets/img/portfolio-img/vrarch1.jpg" style="zoom:80%;" />
 
 <img src="{{site.baseurl}}/assets/img/portfolio-img/vrarch2.jpg" style="zoom:80%;" />
 
